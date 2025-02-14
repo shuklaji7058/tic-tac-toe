@@ -8,11 +8,11 @@ export default function ({ name, symbol }) {
   }
 
   let playerName = <span className="player-name">{name}</span>;
-  let btnCaption = "Edit";
+  // let btnCaption = "Edit";
 
   if (isEditing) {
-    playerName = <input type="text" required />;
-    btnCaption = "Save";
+    playerName = <input type="text" required value={name} />;
+    // btnCaption = "Save";
   }
 
   return (
@@ -21,7 +21,7 @@ export default function ({ name, symbol }) {
         {playerName}
         <span className="player-symbol">{symbol}</span>
       </span>
-      <button onClick={handleEditClick}>{btnCaption}</button>
+      <button onClick={handleEditClick}>{isEditing ? "Save" : "Edit"}</button>
     </li>
   );
 }

@@ -19,7 +19,7 @@ export default function ({ initialName, symbol }) {
     editablePlayerName = (
       <input type="text" required value={playerName} onChange={handleChange} />
     );
-    btnCaption = "Save";
+    // btnCaption = "Save";
   }
 
   return (

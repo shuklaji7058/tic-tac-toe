@@ -3,7 +3,7 @@ import GameBoard from "./components/GameBoard";
 import Log from "./components/Log";
 import Player from "./components/Player";
 
-function deriveActivePlayer() {
+function deriveActivePlayer(gameTurns) {
   let currentPlayer = "X";
 
   if (gameTurns.length > 0 && gameTurns[0].player === "X") {

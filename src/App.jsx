@@ -2,7 +2,6 @@ import { useState } from "react";
 import GameBoard from "./components/GameBoard";
 import Log from "./components/Log";
 import Player from "./components/Player";
-import { WINNING_COMBINATIONS } from "./Winning-combination";
 
 function deriveActivePlayer(gameTurns) {
   let currentPlayer = "X";
@@ -15,7 +14,9 @@ function deriveActivePlayer(gameTurns) {
 
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
+  // const [hasWinner, setHasWinner] = useState(false);
   // const [activePlayer, setActivePlayer] = useState("X");
+
   const activePlayer = deriveActivePlayer(gameTurns);
 
   function handleSelectSquare(rowIndex, colIndex) {
